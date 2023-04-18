@@ -19,7 +19,7 @@ a {
 /* Regole header */
 
 header a {
-   color: white;
+   /* color: white; */
 }
 
 /* Regole main_nav */
@@ -28,12 +28,32 @@ header a {
   position: fixed;
   width: 100%;
   height: 50px;
-  background-color: black;
+  background-color: white;
+  color: black;
 }
 
+#logo {
+  width: 50px;
+}
+
+#logo img{
+  height: 30px;
+}
+
+#desktop_logo {
+  display: none;
+}
+
+.fa-bell {
+  color: orangered;
+}
 
 #menu {
   display: none;
+}
+
+#menu a {
+  padding: 1px;
 }
 
 /* Regole main */
@@ -46,18 +66,41 @@ header a {
 #application_nav {
   width: 50px;
   height: 100%;
+  color: white;
 }
 
-#application_nav a {
+#application_nav a{
   color: white;
 }
 
 #application_nav #recap_pages {
   height: 95%;
+  margin-top: 10px;
 }
 
-#recap_pages, #admin_setting {
+.desktop_nav {
+  display: none;
+}
+
+.fa-ul:hover {
+  cursor: pointer;
+}
+
+.admin_setting {
   text-align: center;
+}
+
+#general_infos {
+  color: white;
+}
+
+.fa-square-plus {
+  color: white;
+  font-size: 50px;
+}
+
+.fa-square-plus:hover {
+  color: grey;
 }
 
 #application #application_overview {
@@ -71,6 +114,15 @@ header a {
   background-color: blue;
   padding: 20px 10px;
 }
+
+#add_student, #current_page {
+  margin-bottom: 20px;
+}
+
+#current_page .btn {
+  font-size: 10px;
+}
+
 
 #next_classes, #faq, #todo_list, #active_users{
   width: 90%;
@@ -91,7 +143,7 @@ header a {
   margin: 10px auto 20px;
 }
 
-#next_classes .table .hide{
+.hide{
   visibility:hidden;
 }
 
@@ -149,8 +201,12 @@ header a {
 
 @media screen and (min-width:568px) {
 
-  #next_classes .table .hide{
+  .hide{
     visibility:visible;
+  }
+
+  #show_pages {
+    display: none;
   }
 }
 
@@ -158,12 +214,28 @@ header a {
 
 @media screen and (min-width:992px) {
 
+  #mobile_logo {
+    display: none;
+  }
+
+  #desktop_logo {
+    display: inline-block;
+  }
+
   #menu {
     display: block;
   }
 
   #application_nav {
     width: 200px;
+  }
+
+  .desktop_nav {
+    display: block;
+  }
+
+  .mobile_nav {
+    display: none;
   }
 
   #application #application_overview {
@@ -177,7 +249,7 @@ header a {
 
 .col-1{
   /* color: white; */
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 
