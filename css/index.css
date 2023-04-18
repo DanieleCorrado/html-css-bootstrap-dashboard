@@ -6,6 +6,21 @@
   box-sizing: border-box;
 }
 
+body {
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+
 /* Regole header */
 
 /* Regole main_nav */
@@ -18,23 +33,77 @@ header {
   color: white;
 }
 
+#menu {
+  display: none;
+}
+
 /* Regole main */
 
-main {
+#application {
   padding-top: 50px;
   height: 100vh;
+}
+
+#application_nav {
+  width: 50px;
+  height: 100%;
+}
+
+#application_nav #recap_pages {
+  height: 95%;
+}
+
+#recap_pages, #admin_setting {
+  text-align: center;
+}
+
+#application #application_overview {
+  width: calc(100% - 50px);
+  height: calc(100vh - 50px);
+  overflow: auto;
+}
+
+
+/* Regole responsive */
+
+@media screen and (min-width:992px) {
+
+  #menu {
+    display: block;
+  }
+
+  #application_nav {
+    width: 200px;
+  }
+
+  #application #application_overview {
+    width: calc(100% - 200px);
+  }
+  
 }
 
 
 /* DEBUG */
 
-.col-1 {
+.col-1{
   color: white;
   background-color: blue;
 }
 
-main {
-  background-color: green;
+
+.col-9 {
+  color: white;
+  background-color: violet;
 }
 
-#application_nav
+main {
+  /* background-color: green; */
+}
+
+#application_nav {
+  background-color: black;
+}
+
+#application #application_overview {
+  background-color: red;
+}
