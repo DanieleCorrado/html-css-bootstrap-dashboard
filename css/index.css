@@ -6,32 +6,31 @@
   box-sizing: border-box;
 }
 
-body {
-  color: white;
-}
-
 ul {
   list-style: none;
   padding: 0;
 }
 
 a {
-  color: white;
   text-decoration: none;
 }
 
 
 /* Regole header */
 
+header a {
+   color: white;
+}
+
 /* Regole main_nav */
 
-header {
+#main_header {
   position: fixed;
   width: 100%;
   height: 50px;
   background-color: black;
-  color: white;
 }
+
 
 #menu {
   display: none;
@@ -49,6 +48,10 @@ header {
   height: 100%;
 }
 
+#application_nav a {
+  color: white;
+}
+
 #application_nav #recap_pages {
   height: 95%;
 }
@@ -61,10 +64,67 @@ header {
   width: calc(100% - 50px);
   height: calc(100vh - 50px);
   overflow: auto;
+  color: black;
+}
+
+#general_infos {
+  background-color: blue;
+  padding: 20px 10px;
+}
+
+#next_classes, #faq {
+  width: 90%;
+  margin: 10px auto;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.section_title{
+  padding-top: 10px;
+  padding-left: 25px;
+  border-bottom: 1px solid grey;
+  background-color: grey;
+}
+
+#next_classes .table{
+  width: 95%;
+  margin: 10px auto 20px;
+}
+
+#next_classes .table .hide{
+  visibility:hidden;
+}
+
+/* Regole faq */
+
+.question {
+  border-bottom: 1px solid grey;
+  width: 95%;
+  margin: 5px auto;
+}
+
+.question:last-child {
+  border: none;
+}
+
+.question p a {
+  display: block;
+  color: black;
 }
 
 
 /* Regole responsive */
+
+/* Regole md */
+
+@media screen and (min-width:568px) {
+
+  #next_classes .table .hide{
+    visibility:visible;
+  }
+}
+
+/* Regole lg */
 
 @media screen and (min-width:992px) {
 
@@ -86,14 +146,14 @@ header {
 /* DEBUG */
 
 .col-1{
-  color: white;
+  /* color: white; */
   background-color: blue;
 }
 
 
-.col-9 {
-  color: white;
-  background-color: violet;
+.col-9, .col-12 {
+  /* color: white; */
+  /* background-color: violet; */
 }
 
 main {
@@ -104,6 +164,6 @@ main {
   background-color: black;
 }
 
-#application #application_overview {
+/* #application #application_overview {
   background-color: red;
-}
+} */
