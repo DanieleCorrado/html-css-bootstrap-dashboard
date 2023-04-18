@@ -72,7 +72,7 @@ header a {
   padding: 20px 10px;
 }
 
-#next_classes, #faq {
+#next_classes, #faq, #todo_list, #active_users{
   width: 90%;
   margin: 10px auto;
   border-radius: 5px;
@@ -110,6 +110,36 @@ header a {
 .question p a {
   display: block;
   color: black;
+}
+
+/* Regole todo list */
+
+#list {
+  width: 95%;
+  margin: 10px auto;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+/* Regole active_users */
+
+#graph {
+  width: 90%;
+}
+
+#graph img {
+  width: 100%;
+}
+
+#active_users_list .section_title {
+  background-color: white;
+  border: none;
+  margin-bottom: 10px;
+}
+
+#active_users_list a {
+  text-decoration: underline;
+  margin-left: 10px;
 }
 
 
