@@ -277,6 +277,7 @@ body {
 
   #general_infos .row .col-12:first-child {
     order: 1;
+    text-align: end;
   }
 
   #menu {
@@ -304,27 +305,3 @@ body {
   }
   
 }
-
-
-/* DEBUG */
-
-.col-1{
-  /* color: white; */
-  /* background-color: blue; */
-}
-
-
-.col-9, .col-12 {
-  /* color: white; */
-  /* background-color: violet; */
-}
-
-main {
-  /* background-color: green; */
-}
-
-
-
-/* #application #application_overview {
-  background-color: red;
-} */
