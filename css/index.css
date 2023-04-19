@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 ul {
@@ -15,11 +16,15 @@ a {
   text-decoration: none;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 
 /* Regole header */
 
-header a {
-   /* color: white; */
+#main_header input {
+  font-family: FontAwesome, "Roboto", sans-serif;
 }
 
 /* Regole main_nav */
@@ -33,11 +38,12 @@ header a {
 }
 
 #logo {
-  width: 50px;
+  width: 150px;
 }
 
-#logo img{
-  height: 30px;
+#logo #mobile_logo{
+  max-height: 100%;
+  max-width: 25%;
 }
 
 #desktop_logo {
@@ -53,7 +59,7 @@ header a {
 }
 
 #menu a {
-  padding: 1px;
+  padding: 3px;
 }
 
 /* Regole main */
@@ -67,11 +73,14 @@ header a {
   width: 50px;
   height: 100%;
   color: white;
+  background-color: black;
 }
 
 #application_nav a{
   color: white;
+  margin-left: 10px;
 }
+
 
 #application_nav #recap_pages {
   height: 95%;
@@ -82,12 +91,23 @@ header a {
   display: none;
 }
 
-.fa-ul:hover {
+#application_nav li:hover {
+  background-color: grey;
+  opacity: 85%;
+}
+
+#recap_pages ul:hover {
   cursor: pointer;
 }
 
 .admin_setting {
   text-align: center;
+}
+
+.admin_setting:hover {
+  cursor: pointer;
+  background-color: grey;
+  opacity: 85%;
 }
 
 #general_infos {
@@ -111,7 +131,7 @@ header a {
 }
 
 #general_infos {
-  background-color: blue;
+  background-color: rgb(27, 114, 237);
   padding: 20px 10px;
 }
 
@@ -120,10 +140,8 @@ header a {
 }
 
 #current_page .btn {
-  font-size: 10px;
+  font-size: 15px;
 }
-
-
 #next_classes, #faq, #todo_list, #active_users{
   width: 90%;
   margin: 10px auto;
@@ -135,15 +153,42 @@ header a {
   padding-top: 10px;
   padding-left: 25px;
   border-bottom: 1px solid grey;
-  background-color: grey;
+  background-color: rgb(247, 247, 247);
 }
 
 #next_classes .table{
   width: 95%;
-  margin: 10px auto 20px;
 }
 
-.hide{
+#next_classes .table img{
+  width: 20px;
+}
+
+#next_classes .table  tr:hover {
+  background-color: grey;
+  opacity: 85%;
+}
+
+#next_classes .table  tr td i{
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+#next_classes .table  tr td i:hover{
+  color: white;
+  background-color: gray;
+}
+
+#next_classes .table  tr td i:last-child {
+  margin-top: 5px;
+}
+
+#next_classes .table  tr td i:hover {
+  cursor: pointer;
+}
+
+.hide, .hide_desktop{
   visibility:hidden;
 }
 
@@ -208,11 +253,19 @@ header a {
   #show_pages {
     display: none;
   }
+
+  #next_classes .table  tr td i:last-child {
+    margin-left: 5px;
+  }
 }
 
 /* Regole lg */
 
 @media screen and (min-width:992px) {
+
+  .hide_desktop{
+    visibility:visible;
+  }
 
   #mobile_logo {
     display: none;
@@ -224,6 +277,10 @@ header a {
 
   #menu {
     display: block;
+  }
+
+  #mobile_page {
+    display: none;
   }
 
   #application_nav {
@@ -262,9 +319,7 @@ main {
   /* background-color: green; */
 }
 
-#application_nav {
-  background-color: black;
-}
+
 
 /* #application #application_overview {
   background-color: red;

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/index.css">
@@ -22,7 +25,9 @@
 
           <div class="row gx-0 p-2 justify-content-between align-items-center">
 
-            <div class="col-1">
+            <!-- Logo pagina -->
+
+            <div class="col-2">
 
               <div id="logo">
                 <img id="desktop_logo" src="img/logo.svg" alt="Logo">
@@ -31,19 +36,23 @@
               
             </div>
 
-            <div class="col-9">
+            <!-- Barra di ricerca -->
+
+            <div class="col-7">
 
               <div class="row align-items-center ">
                 
-                <input type="text" class="form-control" placeholder="Prova a cercare: Lezioni di Laravel">
+                <input type="text" class="form-control" placeholder="&#xF002; Prova a cercare: Lezioni di Laravel">
 
               </div>
                           
             </div>
 
-            <div class="col-1 text-end">
+            <!-- Menu di navigazione -->
 
-              <div class="row gx-0">
+            <div class="col-2 text-end">
+
+              <div class="row gx-0 align-items-center">
 
                 <div class="col-6">
 
@@ -55,10 +64,21 @@
 
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 ">
 
-                  <div>
-                    <a href="#"><i class="fa-solid fa-bell"></i></a>
+                  <div class="dropdown">
+
+                    <button class="btn" type="button" data-bs-toggle="dropdown" >
+                      <i class="fa-solid fa-bell"></i>
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+                      <li><button class="dropdown-item" type="button">Profilo</button></li>
+                      <li><button class="dropdown-item" type="button">Fatturazione</button></li>
+                      <li><button class="dropdown-item" type="button">Logout</button></li>
+                    </ul>
+
                   </div>
 
                 </div>
@@ -77,9 +97,15 @@
 
       <main>
 
+        <!-- Corpo applicazione -->
+
         <div id="application" class="row gx-0">
 
+          <!-- Menu di navigazione -->
+
           <nav id="application_nav">
+
+            <!-- Sezioni applicazione -->
 
             <div id="recap_pages">
   
@@ -89,14 +115,15 @@
                 <li><a href="#"><i class="fa-solid fa-signal"></i></a></li>
               </ul>
 
-              <ul class="desktop_nav fa-ul">
-                <li><span class="fa-li"><i class="fa-solid fa-house"></i></span>Home</li>
-                <li><span class="fa-li"><i class="fa-solid fa-chart-simple"></i></span>Stats</li>
-                <li><span class="fa-li"><i class="fa-solid fa-signal"></i></span>Signals</li>
+              <ul class="desktop_nav p-3">
+                <li><i class="fa-solid fa-house"></i> Home</li>
+                <li><i class="fa-solid fa-chart-simple"></i> Stats</li>
+                <li><i class="fa-solid fa-signal"></i> Signals</li>
               </ul>
   
             </div>
 
+            <!-- Impostazioni admin -->
             <div class="admin_setting mobile_nav">
   
               <span><i class="fa-solid fa-user"></i></span>
@@ -105,12 +132,13 @@
   
             <div class="admin_setting desktop_nav">
   
-              <span><i class="fa-solid fa-user"></i> place holddaer</span>
+              <span><i class="fa-solid fa-user"></i> Admin</span>
   
             </div>
 
           </nav>
 
+          <!-- Pagina corrente -->
           <div id="application_overview">
 
             <!-- Informazioni generali -->
@@ -127,7 +155,7 @@
 
                       <span>Nuovo Studente</span>
 
-                      <a class="btn" data-bs-toggle="offcanvas" href="#add_student_menu" role="button" aria-controls="add_student_menu">
+                      <a class="btn" data-bs-toggle="offcanvas" href="#add_student_menu" role="button">
                         <i class="fa-solid fa-square-plus"></i>
                       </a>
                     
@@ -175,7 +203,7 @@
 
                           <div class="col-md-4">
                             <label for="strudent_states" class="form-label">Stato</label>
-                            <select class="form-select" class="form-control" id="strudent_states" required>
+                            <select class="form-select form-control" id="strudent_states" required>
                               <option selected disabled value="">Scegli...</option>
                               <option>Italia</option>
                               <option>Francia</option>
@@ -191,7 +219,7 @@
 
                           <div class="mb-3">
                             <label for="formFile" class="form-label">Nessun file selezionato</label>
-                            <input class="form-control" type="file" class="form-control" id="formFile">
+                            <input class="form-control" type="file" id="formFile">
                           </div>
                           
 
@@ -215,68 +243,55 @@
 
                       </div> 
 
+                    </div>
+
                   </div>
 
                 </div>
 
-              </div>
-
                 <!-- Pagina corrente -->
 
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 mb-3">
 
                   <div id="current_page">
 
-                    <div class="row">
+                    <div class="row gx-0 align-items-baseline">
 
-                      <div class="col-3">
+                      <div class="col-2 col-md-3">
                         <h2>Boolean</h2>
                       </div>
-
-                      <div class="col-3">
-
-                        <button type="button" class="btn btn-primary">
-                          Piano Blaze
-                        </button>
-
+  
+                      <div class="col-2 col-md-3">
+                        <button class="btn btn-primary btn-sm py-0">Piano Blaze</button>
                       </div>
-
+  
                     </div>
-
+  
                     <div class="row">
-
-                      <div class="col-4 col-sm-1">
-
-                        <button type="button" class="btn btn-primary">
-                          3 app
-                        </button>
-
-
   
-                        <button type="button" class="btn btn-primary" id="show_pages">
-                          +
-                        </button>
+                      <div class="col-3 col-md-4">
+                        <button class="btn btn-primary btn-sm py-0">Prova</button>
+                        <span><i class="fa-solid fa-angles-right"></i></span>
+                      </div>
+  
+                      <div class="col-8 col-md-7">
+
+                        <button id="mobile_page" class="btn btn-primary btn-sm py-0">+3</button>
+
+                        <div class="hide_desktop">
+
+                          <button class="btn btn-primary btn-sm py-0">Prova</button>
+  
+                          <button class="btn btn-primary btn-sm py-0">Prova</button>
+  
+                          <button class="btn btn-primary btn-sm py-0">Prova</button>
+
+                        </div>
   
                       </div>
-
-                      <div class="col-5 hide">
-
-                        <button type="button" class="btn btn-primary">
-                          +
-                        </button>
-
-                        <button type="button" class="btn btn-primary">
-                          +
-                        </button>
-
-                        <button type="button" class="btn btn-primary">
-                          +
-                        </button>
-
-                      </div>
-
+  
                     </div>
-                    
+
                   </div>
 
                 </div>
@@ -290,6 +305,8 @@
                   <h4>125</h4>
 
                 </div>
+
+              </div>
 
             </header>
 
@@ -306,17 +323,24 @@
                 <div id="next_classes">
 
                   <div class="section_title">
-                    <h2>PLACE HOLDER</h2>
+                    <h2>PROSSIME CLASSI</h2>
                   </div>
                   
-                  <table class="table">
+                  <table class="table m-2">
                     
                     <thead>
-                      <th class="w-50">Nome</th>
-                      <th class="hide">Data inizio</th>
-                      <th class="hide">ROI</th>
-                      <th>Stato</th>
-                      <th>Azioni</th>
+
+                      <tr>
+
+                        <th scope="col"> </th>
+                        <th class="w-25">Nome</th>
+                        <th class="hide">Data inizio</th>
+                        <th class="hide">ROI</th>
+                        <th>Stato</th>
+                        <th>Azioni</th>
+
+                      </tr>
+
                     </thead>
 
                     <tbody>
@@ -325,11 +349,17 @@
 
                       <tr>
 
-                        <td>Place holder</td>
-                        <td class="hide">Place holder</td>
-                        <td class="hide">place holder</td>
-                        <td>place holder</td>
-                        <td>place holder</td>    
+                        <td><img src="img/class-avatar.jpg" alt=""></td>
+                        <td>Classe 75</td>
+                        <td class="hide">15 Feb 2021</td>
+                        <td class="hide">20%</td>
+                        <td> 
+                          <span class="bg-success rounded p-1">Done</span>
+                        </td>
+                        <td>
+                          <i class="fa-solid fa-pencil"></i>
+                          <i class="fa-solid fa-trash"></i>
+                        </td>    
 
                       </tr>
 
@@ -337,11 +367,35 @@
 
                       <tr>
 
-                        <td>Place holder</td>
-                        <td class="hide">Place holder</td>
-                        <td class="hide">place holder</td>
-                        <td>place holder</td>
-                        <td>place holder</td>    
+                        <td><img src="img/class-avatar.jpg" alt=""></td>
+                        <td>Classe 76</td>
+                        <td class="hide">16 Feb 2021</td>
+                        <td class="hide">20%</td>
+                        <td> 
+                          <span class="bg-success rounded p-1">Done</span>
+                        </td>
+                        <td>
+                          <i class="fa-solid fa-pencil"></i>
+                          <i class="fa-solid fa-trash"></i>
+                        </td>    
+
+                      </tr>
+
+                      <!-- Classe -->
+
+                      <tr>
+                        
+                        <td><img src="img/class-avatar.jpg" alt=""></td>
+                        <td>Classe 77</td>
+                        <td class="hide">17 Feb 2021</td>
+                        <td class="hide">20%</td>
+                        <td> 
+                          <span class="bg-warning rounded p-1">Process</span>
+                        </td>
+                        <td>
+                          <i class="fa-solid fa-pencil"></i>
+                          <i class="fa-solid fa-trash"></i>
+                        </td> 
 
                       </tr>
 
@@ -349,11 +403,17 @@
 
                       <tr>
 
-                        <td>Place holder</td>
-                        <td class="hide">Place holder</td>
-                        <td class="hide">place holder</td>
-                        <td>place holder</td>
-                        <td>place holder</td>    
+                        <td><img src="img/class-avatar.jpg" alt=""></td>
+                        <td>Classe 78</td>
+                        <td class="hide">18 Feb 2021</td>
+                        <td class="hide">20%</td>
+                        <td> 
+                          <span class="bg-success rounded p-1">Done</span>
+                        </td>
+                        <td>
+                          <i class="fa-solid fa-pencil"></i>
+                          <i class="fa-solid fa-trash"></i>
+                        </td>   
 
                       </tr>
 
@@ -361,11 +421,17 @@
 
                       <tr>
 
-                        <td>Place holder</td>
-                        <td class="hide">Place holder</td>
-                        <td class="hide">place holder</td>
-                        <td>place holder</td>
-                        <td>place holder</td>    
+                        <td><img src="img/class-avatar.jpg" alt=""></td>
+                        <td>Classe 79</td>
+                        <td class="hide">19 Feb 2021</td>
+                        <td class="hide">20%</td>
+                        <td> 
+                          <span class="bg-danger rounded p-1">Failed</span>
+                        </td>
+                        <td>
+                          <i class="fa-solid fa-pencil"></i>
+                          <i class="fa-solid fa-trash"></i>
+                        </td>   
 
                       </tr>
 
@@ -373,11 +439,17 @@
 
                       <tr>
 
-                        <td>Place holder</td>
-                        <td class="hide">Place holder</td>
-                        <td class="hide">place holder</td>
-                        <td>place holder</td>
-                        <td>place holder</td>    
+                        <td><img src="img/class-avatar.jpg" alt=""></td>
+                        <td>Classe 80</td>
+                        <td class="hide">20 Feb 2021</td>
+                        <td class="hide">20%</td>
+                        <td> 
+                          <span class="bg-success rounded p-1">Done</span>
+                        </td>
+                        <td>
+                          <i class="fa-solid fa-pencil"></i>
+                          <i class="fa-solid fa-trash"></i>
+                        </td>   
 
                       </tr>
 
@@ -385,11 +457,17 @@
 
                       <tr>
 
-                        <td>Place holder</td>
-                        <td class="hide">Place holder</td>
-                        <td class="hide">place holder</td>
-                        <td>place holder</td>
-                        <td>place holder</td>    
+                        <td><img src="img/class-avatar.jpg" alt=""></td>
+                        <td>Classe 81</td>
+                        <td class="hide">21 Feb 2021</td>
+                        <td class="hide">20%</td>
+                        <td> 
+                          <span class="bg-danger rounded p-1">Failed</span>
+                        </td>
+                        <td>
+                          <i class="fa-solid fa-pencil"></i>
+                          <i class="fa-solid fa-trash"></i>
+                        </td>    
 
                       </tr>
 
@@ -397,43 +475,32 @@
 
                       <tr>
 
-                        <td>Place holder</td>
-                        <td class="hide">Place holder</td>
-                        <td class="hide">place holder</td>
-                        <td>place holder</td>
-                        <td>place holder</td>    
+                        <td><img src="img/class-avatar.jpg" alt=""></td>
+                        <td>Classe 82</td>
+                        <td class="hide">22 Feb 2021</td>
+                        <td class="hide">20%</td>
+                        <td> 
+                          <span class="bg-success rounded p-1">Done</span>
+                        </td>
+                        <td>
+                          <i class="fa-solid fa-pencil"></i>
+                          <i class="fa-solid fa-trash"></i>
+                        </td>  
 
                       </tr>
-
-                      <!-- Classe -->
-
-                      <tr>
-
-                        <td>Place holder</td>
-                        <td class="hide">Place holder</td>
-                        <td class="hide">place holder</td>
-                        <td>place holder</td>
-                        <td>place holder</td>    
-
-                      </tr>
-
-                      
 
                     </tbody>
                     
                   </table>
-                  
 
-
-                
                 </div>
 
-                <!-- F:A.Q -->
+                <!-- F.A.Q -->
 
                 <div id="faq">
 
                   <div class="section_title">
-                    <h2>PLACE HOLDER</h2>
+                    <h2>F.A.Q.</h2>
                   </div>
 
                   <!-- Domanda -->
@@ -441,14 +508,14 @@
                   <div class="question">
 
                     <p>
-                      <a data-bs-toggle="collapse" href="#first_answer"  aria-controls="collapseExample">
-                        Place holder?
+                      <a data-bs-toggle="collapse" href="#first_answer"  >
+                        Come aggiungere un nuovo studente?
                       </a>
                     </p>
 
                     <div class="collapse" id="first_answer">
                       <div class="">
-                        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae iste sunt explicabo veritatis recusandae esse debitis, tempore minus, ullam quas dolorum libero inventore sequi unde ducimus facilis laudantium voluptas et.
                       </div>
                     </div>
 
@@ -459,14 +526,14 @@
                   <div class="question">
 
                     <p>
-                      <a data-bs-toggle="collapse" href="#second_answer"  aria-controls="collapseExample">
-                        Place holder?
+                      <a data-bs-toggle="collapse" href="#second_answer">
+                        Come posso accedere alle informazioni del mio account?
                       </a>
                     </p>
 
                     <div class="collapse" id="second_answer">
                       <div class="">
-                        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem error autem cum necessitatibus nihil provident aspernatur officia in? Suscipit animi necessitatibus id, hic unde ipsum et veritatis illum explicabo omnis.
                       </div>
                     </div>
 
@@ -477,14 +544,14 @@
                   <div class="question">
 
                     <p>
-                      <a data-bs-toggle="collapse" href="#third_answer"  aria-controls="collapseExample">
-                        Place holder?
+                      <a data-bs-toggle="collapse" href="#third_answer">
+                        Posso usare questa dashboard da mobile?
                       </a>
                     </p>
 
                     <div class="collapse" id="third_answer">
                       <div class="">
-                        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat saepe quisquam maiores sed explicabo, nulla excepturi tempore? Magnam corrupti soluta magni minima, saepe neque iure, amet itaque vitae ea at!
                       </div>
                     </div>
 
@@ -503,29 +570,29 @@
                 <div id="todo_list">
 
                   <div class="section_title">
-                    <h2>PLACE HOLDER</h2>
+                    <h2>Todo</h2>
                   </div>
 
                   <div id="list">
 
                     <div class="form-check m-2 border-bottom">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <input class="form-check-input" type="checkbox">
                       <label >
-                        Place holder
+                        Kickoff nuove classi
                       </label>
                     </div>
 
                     <div class="form-check m-2 border-bottom">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <input class="form-check-input" type="checkbox">
                       <label >
-                        Place holder
+                        Lezione su Bootsrap 5 in classe #75
                       </label>
                     </div>
 
                     <div class="form-check m-2">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <input class="form-check-input" type="checkbox">
                       <label >
-                        Place holder
+                        Controllare username github studenti
                       </label>
                     </div>
 
@@ -546,19 +613,17 @@
                   <div id="active_users_list">
 
                     <div class="section_title">
-                      <h2>PLACE HOLDER</h2>
-                      <span>Place holder</span>
+                      <h2>Utenti attivi</h2>
+                      <span>Lista degli utenti attiv in piattaforma nell'ultimo mese</span>
                     </div>
 
                     <ul class="list-group mb-4">
-                      <li class="list-group-item border-top-0">Place holder</li>
-                      <li class="list-group-item">Place holder</li>
-                      <li class="list-group-item">Place holder</li>
-                      <li class="list-group-item">Place holder</li>
-                      <li class="list-group-item">Place holder</li>
+                      <li class="list-group-item border-top-0">Gennaio: 1200</li>
+                      <li class="list-group-item">Febbraio: 800</li>
+                      <li class="list-group-item">Marzo 1500</li>
                     </ul>
 
-                    <a href="#">Place holder</a>
+                    <a href="#">Visualizza report approfondito</a>
                   
                   </div>
                   
@@ -577,7 +642,8 @@
     </div>
 
 
-
+    <!-- JS per Bootstrap -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
   </body>
