@@ -275,6 +275,10 @@ body {
     display: inline-block;
   }
 
+  #general_infos .row .col-12:first-child {
+    order: 1;
+  }
+
   #menu {
     display: block;
   }
